@@ -49,8 +49,8 @@ $(TEST_DIR)/build: $(TEST_SRC)
 $(TEST_DIR)/build/%: $(TEST_DIR)/build $(TEST_DIR)/%.S
 	@true
 
-%/:
-	mkdir -p $@
+%/: # 目標是目錄時 (%代表任意字串)
+	mkdir -p $@ # 創建該資料夾
 
 RUNTEST.$(TEST_DIR)/build/%: $(TEST_DIR)/build/% $(BUILD_DIR)/Vcore
 	@echo "Running test $(notdir $<)"
