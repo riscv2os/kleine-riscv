@@ -1,3 +1,5 @@
+// hazard 在 pipeline 中使用 (hazard pipeline_hazard ...)
+
 module hazard (
     input reset, // 重置信號
 

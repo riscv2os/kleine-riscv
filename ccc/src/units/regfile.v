@@ -1,3 +1,4 @@
+// regfile 在 pipeline 中使用  (regfile pipeline_registers ...)
 module regfile (
     input clk, // 時鐘信號
 

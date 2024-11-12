@@ -1,3 +1,5 @@
+// decode 在 pipeline 中使用  decode ... pipeline_decode ...
+
 module decode (
     input clk, // 時鐘信號
 
@@ -305,7 +307,7 @@ always @(posedge clk) begin
                     exception_out <= 1; // 發生異常
                 end
             end
-            7'b0110011 : begin // OP (運算指令)
+            7'b0110011 : begin // OP (運算指令) ，例如 ADD, SUB, ADDI, ....
                 alu_function_out <= instr[14:12]; // 設置 ALU 功能為指令功能碼
                 alu_function_modifier_out <= instr[30]; // 設置功能修飾
                 alu_select_a_out <= ALU_SEL_REG; // ALU 輸入 A 選擇寄存器

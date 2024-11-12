@@ -1,3 +1,5 @@
+// busio 在 core.v 中使用 (busio core_busio ...)
+
 module busio (
     /* input clk, */  // 時鐘信號（當前未使用）
 

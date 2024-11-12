@@ -1,3 +1,8 @@
+// pipeline 在 core.v 中使用 
+// pipeline #(
+//    .RESET_VECTOR(RESET_VECTOR)  // 傳入重置向量參數
+// ) core_pipeline (...
+
 module pipeline #(
     parameter RESET_VECTOR = 32'h8000_0000 // 定義重置向量的值
 ) (

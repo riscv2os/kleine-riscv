@@ -1,3 +1,5 @@
+// cmp 在 execute 中使用 (cmp ex_cmp ...)
+
 module cmp (
     input clk,  // 時鐘信號
 

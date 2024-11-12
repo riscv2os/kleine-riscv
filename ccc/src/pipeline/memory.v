@@ -1,3 +1,5 @@
+// memory 在 pipeline 中使用  memory ... pipeline_memory ...
+
 module memory (
     input clk, // 時鐘信號
     // 來自 execute 模組的輸入

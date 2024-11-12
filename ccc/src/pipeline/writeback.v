@@ -1,3 +1,5 @@
+// writeback 在 pipeline 中使用  writeback ... pipeline_writeback ...
+
 module writeback (
     /* input clk, */ // 時鐘信號（被註解掉）
 

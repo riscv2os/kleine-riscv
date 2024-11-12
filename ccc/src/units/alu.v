@@ -1,3 +1,5 @@
+// alu 模組在 execute.v 中使用 alu ex_alu ...
+
 module alu (
     input clk,  // 時鐘信號輸入
 

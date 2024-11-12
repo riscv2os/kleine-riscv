@@ -1,3 +1,5 @@
+// execute 在 pipeline 中使用  execute ... pipeline_execute ...
+
 module execute (
     input clk, // 時鐘信號
 

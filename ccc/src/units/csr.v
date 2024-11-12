@@ -1,3 +1,5 @@
+// csr 在 pipeline 中使用 (csr pipeline_csr ...) 
+
 module csr (
     input clk,       // 時鐘信號
     input reset,     // 重置信號

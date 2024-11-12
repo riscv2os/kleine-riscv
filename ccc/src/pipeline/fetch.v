@@ -64,10 +64,10 @@ end
 // 在時鐘上升沿更新輸出信號
 always @(posedge clk) begin
     // 根據停頓和無效信號更新有效信號
-    valid_out <= (stall ? valid_out : 1) && !invalidate;
+    valid_out <= (stall ? valid_out : 1) && !invalidate; // 如果沒有 invalidate 與 stall，那麼就持續 valid_out
     
     if (!stall) begin
-        // 如果未發生停頓，更新 pc_out、next_pc_out 和 instruction_out
+        // 如果未發生停頓，更新 pc_out、next_pc_out 和 instruction_out  (繼續正常執行下去)
         pc_out <= pc; // 更新當前 pc
         next_pc_out <= next_pc; // 更新下一個 pc
         instruction_out <= fetch_data; // 更新指令數據
