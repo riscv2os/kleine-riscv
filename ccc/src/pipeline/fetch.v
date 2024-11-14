@@ -1,3 +1,5 @@
+// fetch 在 pipeline 中使用  fetch ... pipeline_fetch ...
+
 module fetch #(
     parameter RESET_VECTOR = 32'h8000_0000 // 定義重置向量的參數，表示系統重啟時的初始程序計數器值
 ) (
