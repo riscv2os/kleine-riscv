@@ -30,10 +30,11 @@ module testbench;
         
         // 結束模擬
         $stop;
+        $finish;
     end
 
     // 輸出觀察
     initial begin
-        $monitor("Time: %t | PC: %h", $time, pc_out);
+        $monitor("Time: %5t PC: %h I: %h r0=%h rd=%h", $time, pc_out, uut.cpu.instruction, uut.cpu.regfile[0], uut.cpu.rd);
     end
 endmodule

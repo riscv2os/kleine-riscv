@@ -30,7 +30,7 @@ module instruction_memory (
     reg [31:0] memory [0:255]; // 256個32位元指令
 
     initial begin
-        // 載入一些範例指令
+        // 載入一些範例指令 （這邊有錯，ＡＩ亂寫的）
         memory[0] = 32'b00000000000000000000000000110011; // ADD x1, x0, x0
         memory[1] = 32'b00000000000000000000000000110111; // ADDI x2, x0, 7
         memory[2] = 32'b00000000000000000000000000110001; // LW x3, 0(x1)
@@ -39,9 +39,6 @@ module instruction_memory (
     end
 
     assign instruction = memory[address[7:0]]; 
-    // always @(*) begin
-    //     instruction = memory[address[7:0]]; // 根據地址讀取指令
-    // end
 endmodule
 
 // 單周期 RISC-V 處理器模組
@@ -52,7 +49,7 @@ module riscv_single_cycle (
 );
     // 註冊
     reg [31:0] pc;                // 程式計數器
-    wire [31:0] instruction; // reg [31:0] instruction;       // 指令寄存器
+    wire [31:0] instruction;      // 指令寄存器
     reg [31:0] regfile [0:31];    // 寄存器檔
     wire [31:0] data_memory_out;  // 數據記憶體輸出
     wire [31:0] imm;              // 立即數
@@ -140,7 +137,8 @@ module riscv_single_cycle (
                 end
                 // 可擴展其他類型的指令
             endcase
-            pc <= pc + 4; // 更新 pc
+            // pc <= pc + 4; // 更新 pc
+            pc <= pc + 1; // 更新 pc
         end
     end
 
