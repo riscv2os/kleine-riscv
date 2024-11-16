@@ -4,6 +4,20 @@
 
 然後就能 make
 
+make 完後會得到 build/Vcore 這個執行檔，就是整個系統的模擬了
+
+    build/Vcore 這個執行檔，主程式是 sim/simulator.cpp 的 main() 函數
+
+例如
+
+    build/Vcore -c 1000000 -e -l 5 tests/build/misc/fibonacci
+
+就會用該系統去跑 fibonacci 並通過 ASSERT 的驗證。
+
+如果沒通過就會直接報錯並中止
+
+## 測試與驗證 -- 正常狀況
+
 ```
 root@localhost:~/kleine-riscv/ccc# make
 make[1]: Entering directory '/root/kleine-riscv/ccc/tests'
@@ -69,6 +83,8 @@ test
 ```
 
 如果沒有錯誤，那就代表所有 test 都是成功的
+
+## 測試與驗證 -- 有錯的狀況
 
 如果有錯，那就會在錯誤的那個測試上停掉
 
