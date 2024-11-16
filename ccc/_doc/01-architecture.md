@@ -3,7 +3,10 @@
 
 1. Kleine-riscv 的 CPU (core.v) 是用 verilog 寫的，放在 src/ 資料夾中，包含經典的 5 階段 pipeline 與 alu/cmp/csr/regfile/hazard/busio 等模組
 2. 但是測試模組 testbench 則是用 C++ 寫的，放在 sim/ 資料夾中，像是 core.cpp/hpp, memory.cpp/hpp, simulator.cpp 等
+    * 參考 -- https://verilator.org/guide/latest/example_cc.html
 3. 測試所需要的機器碼，則是用 .c / .S (C 與組合語言) 寫的，放在 tests 資料夾中
+
+
 
 ## 整體架構
 
