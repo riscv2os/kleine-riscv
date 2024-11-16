@@ -45,7 +45,7 @@ module writeback (
     output wfi, // wfi 信號
 
     // 對 csr 的輸出
-    output retired, // 退役指令計數
+    output retired, // 退役
     output [31:0] ecp, // 異常計數
     output reg [3:0] ecause, // 異常原因
     output reg interupt // 中斷信號
